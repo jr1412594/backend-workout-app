@@ -18,7 +18,8 @@ class UsersController < ApplicationController
             weight: params[:weight],
             activity_level: params[:activity_level],
             goal: params[:goal],
-            age: params[:age]
+            age: params[:age],
+            password: params[:password]
         )
         render json: @user
     end
@@ -31,7 +32,8 @@ class UsersController < ApplicationController
             weight: params[:weight],
             activity_level: params[:activity_level],
             goal: params[:goal],
-            age: params[:age]   
+            age: params[:age],
+            password: params[:password]
         )
         
         render json: @user
