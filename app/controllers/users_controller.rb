@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
 
-        @user = User.update(
+        @user.update(
             name: params[:name],
             weight: params[:weight],
             activity_level: params[:activity_level],
