@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+u1 = User.create(name: "Arnold Schewarzenegger", weight: 250.6, activity_level: 8, goal: "More muscle", age: 60)
+u2 = User.create(name: "Dwayne Johnson", weight: 230.4, activity_level: 10, goal: "More muscle", age: 52)
+u3 = User.create(name: "Tom Arnold", weight: 230.2, activity_level: 2, goal: "More muscle", age: 51)
