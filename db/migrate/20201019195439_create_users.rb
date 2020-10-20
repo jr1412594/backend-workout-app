@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.integer :activity_level
       t.string :goal
       t.integer :age
-      t.string :password_digest
+      t.string :password
 
       t.timestamps
     end
