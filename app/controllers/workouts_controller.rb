@@ -1,7 +1,13 @@
 class WorkoutsController < ApplicationController
 
     def index
-        @workouts = Workout.all 
+        if params[:search_term]
+            @workouts = Workout.where( 
+                kind: params[:search_term]
+            )
+        else
+            @workouts = Workout.all 
+        end
 
         render json: @workouts
     end
