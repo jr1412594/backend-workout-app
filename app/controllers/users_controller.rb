@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             age: params[:age],
             password: params[:password]
         )
-        render json: @user
+        redirect_to `http://localhost:3003/user.html`
     end
 
     def update
