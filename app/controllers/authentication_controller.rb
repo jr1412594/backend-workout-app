@@ -1,6 +1,6 @@
 class AuthenticationController < ApplicationController
     def login
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by(username: params[:username])
     
         if (!@user)
             render json: {error: 'Invalid username'}, status: :unauthorized

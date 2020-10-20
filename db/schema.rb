@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_215057) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username"
     t.string "name"
     t.float "weight"
     t.integer "activity_level"
