@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
     def create 
         @user = User.create(
+            username: params[:username],
             name: params[:name],
             weight: params[:weight],
             activity_level: params[:activity_level],
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
 
         @user.update(
+            username: params[:username],
             name: params[:name],
             weight: params[:weight],
             activity_level: params[:activity_level],
