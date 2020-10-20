@@ -49,4 +49,15 @@ class UsersController < ApplicationController
         render json: "this User has been deleted"
     end
 
+    def login
+        @user = User.find_by(
+            username: params[:username],
+            password: params[:password]
+            )    
+            if (!@user)
+                render json: {error: 'Invalid username'}, status: :unauthorized
+            else
+                redirect_to "http://localhost:3000/user.html?id=#{@user.id}"   
+            end
+        end
 end
