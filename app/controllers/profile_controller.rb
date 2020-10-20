@@ -2,11 +2,14 @@ class ProfileController < ApplicationController
     def index
         headers = request.headers
         authorization_header = headers['Authorization']
-        token = authorization_header.split(" ")[1]
-        if !token
-            render json: 'no token'
+        if !authorization_header
+            render json: 'no token', status: :unauthorized
         else
-        render json: 'hello, youre in your profile'
+            token = authorization_header.split(" ")[1]
+            secret = Rails.application.secrets.secret_key_base[0]
+            payload = JWT.decode(token, secret).first
+            render json: "hello, you are in your profile, #{payload["name"]}"
         end
     end
 end
+/comment for change - delete me
