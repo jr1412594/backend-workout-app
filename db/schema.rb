@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_215057) do
     t.integer "activity_level"
     t.string "goal"
     t.integer "age"
-    t.string "password_digest"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
