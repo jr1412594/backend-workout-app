@@ -1,4 +1,4 @@
 class Program < ApplicationRecord
-  belongs_to :User
-  belongs_to :Workout
+  belongs_to :user
+  belongs_to :workout
 end

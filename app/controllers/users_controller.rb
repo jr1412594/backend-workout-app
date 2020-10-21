@@ -3,13 +3,13 @@ class UsersController < ApplicationController
     def index
         @users = User.all 
 
-        render json: @users
+        render json: @users, include: :workouts
     end
 
     def show
         @user = User.find(params[:id])
 
-        render json: @user
+        render json: @user, include: :workouts
     end
 
     def create 
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             age: params[:age],
             password: params[:password]
         )
-        render json: @user
+        redirect_to "http://localhost:3000/user.html?id=#{@user.id}"
     end
 
     def update
