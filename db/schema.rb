@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_10_19_215057) do
 
   create_table "programs", force: :cascade do |t|
-    t.integer "User_id", null: false
-    t.integer "Workout_id", null: false
+    t.integer "user_id", null: false
+    t.integer "workout_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["User_id"], name: "index_programs_on_User_id"
-    t.index ["Workout_id"], name: "index_programs_on_Workout_id"
+    t.index ["user_id"], name: "index_programs_on_user_id"
+    t.index ["workout_id"], name: "index_programs_on_workout_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2020_10_19_215057) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "programs", "Users"
-  add_foreign_key "programs", "Workouts"
+  add_foreign_key "programs", "users"
+  add_foreign_key "programs", "workouts"
 end
