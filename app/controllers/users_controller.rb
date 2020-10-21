@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             age: params[:age],
             password: params[:password]
         )
-        redirect_to `http://localhost:3003/user.html`
+        redirect_to 'http://localhost:3003/user.html'
     end
 
     def update
