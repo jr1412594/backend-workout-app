@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_215057) do
     t.string "kind"
     t.text "description"
     t.text "video"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

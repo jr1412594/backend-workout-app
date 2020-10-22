@@ -5,6 +5,7 @@ class CreateWorkouts < ActiveRecord::Migration[6.0]
       t.string :kind
       t.text :description
       t.text :video
+      t.text :image
 
       t.timestamps
     end
