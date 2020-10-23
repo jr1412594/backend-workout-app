@@ -55,7 +55,7 @@ class UsersController < ApplicationController
             password: params[:password]
             )    
             if (!@user)
-                render json: {error: 'Invalid username'}, status: :unauthorized
+                render json: {message: 'Invalid username'}, status: :unauthorized
             else
                 redirect_to "http://localhost:3000/user.html?id=#{@user.id}"   
             end
